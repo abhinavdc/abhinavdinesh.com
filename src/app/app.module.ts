@@ -10,6 +10,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     AppRoutingModule,
     SharedModule,
+    RouterModule,
     MarkdownModule.forRoot(),
   ],
   providers: [],
