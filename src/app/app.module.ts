@@ -11,6 +11,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { NavComponent } from './layout/components/nav/nav.component';
+import { BioComponent } from './layout/components/bio/bio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { RouterModule } from '@angular/router';
     PortfoliosComponent,
     BlogComponent,
     AboutComponent,
-    LayoutComponent
+    LayoutComponent,
+    NavComponent,
+    BioComponent
   ],
   imports: [
     BrowserModule,
