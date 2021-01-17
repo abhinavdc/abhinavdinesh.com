@@ -12,7 +12,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { NavComponent } from './layout/components/nav/nav.component';
-import { BioComponent } from './layout/components/bio/bio.component';
+import { BioComponent } from './pages/home/bio/bio.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BioComponent } from './layout/components/bio/bio.component';
     AboutComponent,
     LayoutComponent,
     NavComponent,
-    BioComponent
+    BioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
