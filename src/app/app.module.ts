@@ -15,6 +15,7 @@ import { NavComponent } from './layout/components/nav/nav.component';
 import { BioComponent } from './pages/home/bio/bio.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/home/projects/projects.component';
+import { ProjectItemComponent } from './pages/home/projects/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProjectsComponent } from './pages/home/projects/projects.component';
     NavComponent,
     BioComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectItemComponent
   ],
   imports: [
     BrowserModule,
