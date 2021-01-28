@@ -16,6 +16,7 @@ import { BioComponent } from './pages/home/bio/bio.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/home/projects/projects.component';
 import { ProjectItemComponent } from './pages/home/projects/project-item/project-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProjectItemComponent } from './pages/home/projects/project-item/project
     AppRoutingModule,
     SharedModule,
     RouterModule,
+    HttpClientModule,
     MarkdownModule.forRoot(),
   ],
   providers: [],

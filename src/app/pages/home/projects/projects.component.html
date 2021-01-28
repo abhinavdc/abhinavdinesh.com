@@ -5,8 +5,8 @@
 
     <div>
         <ul>
-            <li>
-                <app-project-item></app-project-item>
+            <li *ngFor="let project of projects" class="mb-5">
+                <app-project-item [data]="project"></app-project-item>
             </li>
         </ul>
     </div>

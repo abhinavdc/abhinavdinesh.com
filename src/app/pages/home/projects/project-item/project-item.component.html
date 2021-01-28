@@ -1,23 +1,18 @@
 <div class="flex justify-between">
     <div class="flex flex-col">
-        <div class="flex items-center my-2">
+        <div class="flex items-end my-2">
             <img class="mr-5"
-                src="https://cdn0.iconfinder.com/data/icons/job-seeker/256/laptop_job_seeker_employee_unemployee_work-48.png"
+                [src]="data.icon"
                 alt="job icon">
-            <h3 class="text-lg"> Find Me a Job </h3>
+            <h3 class="text-lg"> {{ data.name }} </h3>
         </div>
-        <div class="mb-5">Job aggregator with daily email alerts for matching jobs and improved search</div>
+        <div class="mb-5">{{ data.shortDescription }}</div>
         <div class="flex text-xs flex-wrap justify-start">
-            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg">React</div>
-            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg">Next.js</div>
-            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg">Node.js</div>
-            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg">Express.js</div>
-            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg">Postgres</div>
-            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg">TypeORM</div>
+            <div class="bg-gray-100 m-2 px-3 py-1 rounded-lg" *ngFor="let stack of data.stacks">{{ stack }}</div>
         </div>
     </div>
     <div class="flex justify-end items-center">
-        <a class="m-5 flex items-center flex-col" href="">
+        <a class="m-5 flex items-center flex-col" [href]="data.githubLink">
             <svg class="w-5 h-5 m-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd"
                 d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
@@ -25,7 +20,7 @@
             </svg>
             Source
         </a>
-        <a class="m-5 flex items-center flex-col" href="">
+        <a class="m-5 flex items-center flex-col" [href]="data.demoLink">
             <svg class="w-5 h-5 m-2" xmlns="http://www.w3.org/2000/svg" view-box="0 0 20 20"
                 fill="currentColor">
                 <path

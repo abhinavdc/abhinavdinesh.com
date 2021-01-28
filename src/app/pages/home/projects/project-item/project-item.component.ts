@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Project } from 'src/app/shared/models/common';
 
 @Component({
   selector: 'app-project-item',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectItemComponent implements OnInit {
 
+  @Input() data: Project;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

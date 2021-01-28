@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "name": "Find Me a Job",
+            "stacks": ["React", "Next.js", "Node.js", "Express.js", "MongoDB", "TypeORM"],
+            "githubLink": "https://github.com/abhinavdc/findmeajob",
+            "demoLink": "http://findmeajob.abhinav.xyz",
+            "description": "",
+            "icon": "https://cdn0.iconfinder.com/data/icons/job-seeker/256/laptop_job_seeker_employee_unemployee_work-48.png",
+            "images": [],
+            "shortDescription": "Job aggregator with daily email alerts for matching jobs and improved search"
+        },
+        {
+            "name": "Trivia Game",
+            "stacks": ["ClojureScript", "Reagent", "Re-frame"],
+            "githubLink": "https://github.com/abhinavdc/trivia-app",
+            "demoLink": "https://trivia-quiz-app.netlify.com/",
+            "description": "Test your trivia knowledge using the Trivia Quiz. Built this to learn clojure. Leverages the Open Trivia DB for trivia questions.",
+            "icon": "https://cdn2.iconfinder.com/data/icons/doubt-filled-outline-1/64/question-_ask-_query-_doubt-_suspect-48.png",
+            "images": [],
+            "shortDescription": "Test your trivia knowledge using this Trivia Game. New questions every time!"
+        }
+    ]
+}
