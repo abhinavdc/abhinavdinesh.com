@@ -17,6 +17,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/home/projects/projects.component';
 import { ProjectItemComponent } from './pages/home/projects/project-item/project-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticlesComponent } from './pages/home/articles/articles.component';
+import { ArticleItemComponent } from './pages/home/articles/article-item/article-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     BioComponent,
     HomeComponent,
     ProjectsComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    ArticlesComponent,
+    ArticleItemComponent
   ],
   imports: [
     BrowserModule,

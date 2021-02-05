@@ -1,0 +1,13 @@
+<div class="flex flex-col justify-center my-10 max-w-screen-md mx-auto">
+    <div class="h-24 flex justify-center items-center">
+        <h1 class="font-semi-bold text-lg border-2 border-gray-200  border- p-3 text-gray-500">Articles</h1>
+    </div>
+
+    <div>
+        <ul>
+            <li *ngFor="let article of articles" class="mb-5">
+                <app-article-item [data]="article"></app-article-item>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -8,3 +8,10 @@ export interface Project {
     images: string[],
     shortDescription: string
 }
+
+export interface Article {
+    title: string,
+    postedDate: string,
+    tags: string[],
+    content: string
+}
