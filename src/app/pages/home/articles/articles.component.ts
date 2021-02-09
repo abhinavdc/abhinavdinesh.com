@@ -14,7 +14,7 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get<Article[]>(`${environment.apiUrl}articles`).subscribe((articles) =>{
-      this.articles = articles;
+      this.articles = articles.slice(0, 3);
     });
   }
 

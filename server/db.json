@@ -19,6 +19,16 @@
             "icon": "https://cdn2.iconfinder.com/data/icons/doubt-filled-outline-1/64/question-_ask-_query-_doubt-_suspect-48.png",
             "images": [],
             "shortDescription": "Test your trivia knowledge using this Trivia Game. New questions every time!"
+        },
+        {
+            "name": "Say the Levitation Charm",
+            "stacks": ["Angular", "Web Speech API"],
+            "githubLink": "https://github.com/abhinavdc/say-the-levitation-charm",
+            "demoLink": "https://say-the-levitation-charm.netlify.app/",
+            "description": "Test your trivia knowledge using the Trivia Quiz. Built this to learn clojure. Leverages the Open Trivia DB for trivia questions.",
+            "icon": "https://cdn2.iconfinder.com/data/icons/harry-potter-colour-collection/60/11_-_Harry_Potter_-_Colour_-_Quill-48.png",
+            "images": [],
+            "shortDescription": "If you are a Harry Porter fan, find out how much of wizard you are."
         }
     ],
     "articles": [
