@@ -20,6 +20,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArticlesComponent } from './pages/home/articles/articles.component';
 import { ArticleItemComponent } from './pages/home/articles/article-item/article-item.component';
 
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+
+import { environment } from './../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +40,7 @@ import { ArticleItemComponent } from './pages/home/articles/article-item/article
     ProjectsComponent,
     ProjectItemComponent,
     ArticlesComponent,
-    ArticleItemComponent
+    ArticleItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +49,10 @@ import { ArticleItemComponent } from './pages/home/articles/article-item/article
     SharedModule,
     RouterModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireDatabaseModule, // storage
     MarkdownModule.forRoot(),
   ],
   providers: [],

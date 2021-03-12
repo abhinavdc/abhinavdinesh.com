@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0",
+    "config": "ts-node ./src/assets/scripts/setEnv.ts",
+    "start": "npm run config -- --environment=dev && ng serve --host 0.0.0.0",
     "server": "cd server && json-server --watch db.json",
     "dev": "concurrently \"npm run start\" \"npm run server\"",
-    "build": "ng build",
+    "build": "npm run config -- --environment=prod && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -17,6 +18,7 @@
     "@angular/common": "~11.0.0",
     "@angular/compiler": "~11.0.0",
     "@angular/core": "~11.0.0",
+    "@angular/fire": "^6.1.4",
     "@angular/forms": "~11.0.0",
     "@angular/platform-browser": "~11.0.0",
     "@angular/platform-browser-dynamic": "~11.0.0",
@@ -25,10 +27,12 @@
     "ngx-markdown": "^11.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "firebase": "^7.0 || ^8.0"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "11.0.0",
+    "@angular-devkit/architect": ">= 0.900 < 0.1200",
     "@angular-devkit/build-angular": "~0.1100.0",
     "@angular/cli": "~11.0.0",
     "@angular/compiler-cli": "~11.0.0",
@@ -36,6 +40,11 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "firebase-tools": "^8.0.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.1.0",
@@ -43,11 +52,13 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "open": "^7.0.3",
     "postcss": "8.2.4",
     "protractor": "~7.0.0",
     "tailwindcss": "2.0.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "yargs": "^16.2.0"
   }
 }

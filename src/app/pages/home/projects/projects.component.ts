@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 import { Project } from 'src/app/shared/models/common';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-projects',
@@ -9,14 +10,12 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent implements OnInit {
-  public projects: Project[] = [];
+  public projects: Observable<Project[]>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private db: AngularFireDatabase) { }
 
   ngOnInit(): void {
-    this.http.get<Project[]>(`${environment.apiUrl}projects`).subscribe((projects) =>{
-      this.projects = projects;
-    });
+    this.projects = this.db.list<Project>('projects').valueChanges();
   }
 
 }

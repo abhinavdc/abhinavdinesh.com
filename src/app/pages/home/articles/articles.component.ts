@@ -1,21 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 import { Article } from 'src/app/shared/models/common';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html'
 })
 export class ArticlesComponent implements OnInit {
-  public articles: Article[];
+  public articles: Observable<Article[]>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private db: AngularFireDatabase) { }
 
   ngOnInit(): void {
-    this.http.get<Article[]>(`${environment.apiUrl}articles`).subscribe((articles) =>{
-      this.articles = articles.slice(0, 3);
-    });
+    this.articles = this.db.list<Article>(`articles`).valueChanges();
   }
 
 }

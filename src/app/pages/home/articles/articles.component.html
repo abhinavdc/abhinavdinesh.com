@@ -5,7 +5,7 @@
 
     <div>
         <ul>
-            <li *ngFor="let article of articles" class="mb-10">
+            <li *ngFor="let article of articles | async" class="mb-10">
                 <app-article-item [data]="article"></app-article-item>
             </li>
         </ul>

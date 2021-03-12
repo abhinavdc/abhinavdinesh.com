@@ -5,7 +5,7 @@
 
     <div>
         <ul>
-            <li *ngFor="let project of projects" class="mb-5">
+            <li *ngFor="let project of projects | async" class="mb-5">
                 <app-project-item [data]="project"></app-project-item>
             </li>
         </ul>
