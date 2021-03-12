@@ -7,7 +7,7 @@ import { Project } from 'src/app/shared/models/common';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.sass']
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
   public projects: Observable<Project[]>;
