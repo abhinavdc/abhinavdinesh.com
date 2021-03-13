@@ -5,8 +5,6 @@
     "ng": "ng",
     "config": "ts-node ./src/assets/scripts/setEnv.ts",
     "start": "npm run config -- --environment=dev && ng serve --host 0.0.0.0",
-    "server": "cd server && json-server --watch db.json",
-    "dev": "concurrently \"npm run start\" \"npm run server\"",
     "build": "npm run config -- --environment=prod && ng build",
     "test": "ng test",
     "lint": "ng lint",

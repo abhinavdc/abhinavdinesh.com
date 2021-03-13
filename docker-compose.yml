@@ -9,9 +9,3 @@ services:
     volumes: 
       - '.:/app'
       - '/app/node_modules'
-  json-server: #name of the second service
-    build: server # specify the directory of the Dockerfile
-    ports:
-      - "3000:3000" #specify ports forewarding
-    volumes: 
-      - './server:/app'
