@@ -5,9 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MarkdownModule } from 'ngx-markdown';
 import { FormsModule } from '@angular/forms';
-import { BlogComponent } from './pages/blog/blog.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
@@ -32,7 +30,6 @@ import { environment } from './../environments/environment';
   declarations: [
     AppComponent,
     PortfoliosComponent,
-    BlogComponent,
     AboutComponent,
     LayoutComponent,
     NavComponent,
@@ -55,7 +52,6 @@ import { environment } from './../environments/environment';
     AngularFireStorageModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireDatabaseModule, // storage
-    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
